@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="Website for the exergame teleconsultation service using WebRTC technology.">
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+
+	<title>Teleconsulta</title>
+	<link rel="shortcut icon" href="./img/icon.png">
+
+	<!-- Seção de scripts -->
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script type="text/javascript" src="./dist/peer.js"></script>
+	<script type="text/javascript" src="./dist/html.js"></script>
+
+	<!-- borda do vídeo -->
+	<style type="text/css">
+		video {
+			width: 300px;
+			border-radius: 10px;
+		}
+	</style>
+
+</head>
+
+<body>
+	<center class="p-3 mb-2">
+
+		<div id="step1">
+			<h2>Por favor, clique em "permitir" para que possamos acessar a câmera e o microfone.</h2>
+		</div>
+
+		<!-- Video area -->
+		<div class="pure-u-2-3" id="video-container">
+			<video id="their-video"></video>
+			<video id="my-video"></video>
+		</div>
+
+		<div id="step3">
+			<div>
+				<p>
+					<button type="button" class="btn btn-danger" id="end-call">Finalizar Sessão</button>
+				</p>
+			</div>
+		</div>
+
+		<!-- dados sobre a chamada -->
+		<div id="step2">
+			<h4>Seu ID: <span id="my-id"> carregando ...</span></h4>
+			<h5>Compartilhe este ID para que seja possível realizar a chamada!</h5>
+			<p>
+			<form class="form-group">
+				<div class="form-group ">
+					<input type="text" class="form-control" placeholder="ID do outro usuário..." id="callto-id"
+						style="width: 90%">
+				</div>
+				<a href="#" class="btn btn-success" id="make-call">Chamar</a>
+			</form>
+			</p>
+		</div>
+
+
+
+	</center>
+</body>
+
+</html>
